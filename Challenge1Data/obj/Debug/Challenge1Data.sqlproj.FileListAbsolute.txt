@@ -1,0 +1,5 @@
+c:\users\student\source\repos\Challenge1\Challenge1Data\bin\Debug\Challenge1Data.dacpac
+c:\users\student\source\repos\Challenge1\Challenge1Data\bin\Debug\Challenge1Data.dll
+c:\users\student\source\repos\Challenge1\Challenge1Data\bin\Debug\Challenge1Data.pdb
+c:\users\student\source\repos\Challenge1\Challenge1Data\obj\Debug\Challenge1Data.dll
+c:\users\student\source\repos\Challenge1\Challenge1Data\obj\Debug\Challenge1Data.pdb

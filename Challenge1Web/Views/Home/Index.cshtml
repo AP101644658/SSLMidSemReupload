@@ -1,0 +1,30 @@
+﻿<div class="row">
+    @{
+        ViewBag.Title = "Home Page";
+    }
+    <div class="jumbotron">
+        <h1>SSL App</h1>
+        <p class="lead">This application is for the mid semester challenge</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            Would you like to learn more about CI/CD? click below!
+        </p>
+        <p><a class="btn btn-default" @Html.ActionLink("Learn more", "Faq", "Home")</a></p>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Student And Module Lists</h2>
+            <p>
+                Use the button on the right to view a list of Modules or a list of Students.
+            </p>
+        </div>
+        <div class="col-md-4">
+            @Html.ActionLink("List of Modules", "Index", "Modules")
+        </div>
+        <div class="col-md-4">
+            @Html.ActionLink("List of Students", "Index", "Students")
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Challenge1DataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__RefactorLog">
+    <Key>
+      <PropertyRef Name="OperationKey" />
+    </Key>
+    <Property Name="OperationKey" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Module">
+    <Key>
+      <PropertyRef Name="MACAddress" />
+    </Key>
+    <Property Name="MACAddress" Type="nvarchar" MaxLength="17" Nullable="false" />
+    <Property Name="IssueDate" Type="date" />
+    <Property Name="StudentId" Type="nvarchar" MaxLength="11" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="StudentId" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Module_Student">
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+    <End Role="Module" Type="Self.Module" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="Module">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Challenge1DataModelStoreContainer">
+    <EntitySet Name="__RefactorLog" EntityType="Self.__RefactorLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Module" EntityType="Self.Module" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Module_Student" Association="Self.FK_Module_Student">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Module" EntitySet="Module" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

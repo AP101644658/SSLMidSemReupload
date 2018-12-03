@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Faq";
+}
+<div class="jumbotron">
+    <h1>SSL App</h1>
+    <p class="lead">FAQ</p>
+</div>
+<div>
+    <h2>What is CI/CD?</h2>
+    <p>
+        In the Agile age, most companies would deploy/ship software in monthly, quarterly, bi-annual, or even annual releases (remember those days?). In the DevOps era, weekly, daily, and even multiple times a day deployment are the norm.<br><br />
+        Continuous integration (CI) and continuous delivery (CD) embody a culture, set of operating principles, and collection of practices that enable application development teams to deliver code changes more frequently and reliably. The implementation is also known as the CI/CD pipeline and is one of the best practices for devops teams to implement.
+    </p>
+</div>
+<div>
+    <h2>
+        What is the difference between CI and CD?
+    </h2>
+    <p>
+        Continuous integration is a coding philosophy and set of practices that drive development teams to implement small changes and check in code to version control repositories frequently. Because most modern applications require developing code in different platforms and tools, the team needs a mechanism to integrate and validate its changes. The technical goal of CI is to establish a consistent and automated way to build, package, and test applications. With consistency in the integration process in place, teams are more likely to commit code changes more frequently, which leads to better collaboration and software quality.<br><br />
+        Continuous delivery picks up where continuous integration ends. CD automates the delivery of applications to selected infrastructure environments. Most teams work with multiple environments other than the production, such as development and testing environments, and CD ensures there is an automated way to push code changes to them.  CD automation then performs any necessary service calls to web servers, databases, and other services that may need to be restarted or follow other procedures when applications are deployed.
+
+    </p>
+</div>
+<div>
+    <h2>
+        How is CI/CD actually beneficial to the development and maintenance of a software system?
+    </h2>
+    <p>
+        Continuous integration and continuous delivery is incredibly beneficial to the development and maintenance of a software system, if you were to use this philosophy you would expierience<br />
+        <ul>
+            <li>
+                <strong> Mitigation</strong> - Continuous Integration allows you to mitigate risk not only with testing, but also by enabling production parity. Quality Assurance (QA) tasks—such as browser testing—can also be automated, mitigating the risk of a bug making it all the way through to the live site.
+            </li>
+            <li><strong>Consistency of Build Process</strong> - Moving parts of the development workflow—such as a build step compiling assets, like Sass to CSS—allows this to happen the same way, every time. Having automated testing and other items run on CI means that nobody ever forgets a step in the process. </li>
+            <li><strong>Increase Your Code Coverage</strong> - A CI server can check your code for test coverage, seeing code coverage increase over time is a motivator for the team to write tests</li>
+            <li><strong>Increase Visibility Across the Team</strong> - Continuous Integration inspires transparency and accountability across your team. The results of your tests should be displayed on your build pipeline. If a build passes, that increases the confidence of the team. If it fails, you can easily ask team members to help you determine what may have gone wrong. Just like code review, testing should be a transparent process amongst team members.</li>
+        </ul>
+        These are only a few example among many other advantages of using this type of approach to development.
+
+    </p>
+</div>
+<div>
+    <h2>What are some of the main tools used to achieve CI/CD?</h2>
+    <p>
+        With the move to DevOps, there has also been a rise of new automation tools to help with the CI/CD pipeline. These automation tools typically integrate with other various popular developer tools including code repository systems like GitHub and bug tracking systems like Jira. As SaaS has become a more popular delivery model, many of these tools are running in the cloud, the same place where many modern developers are running their apps.<br><br />
+        The most popular automation tool is Jenkins (formerly Hudson), which is an open source project supported by hundreds of contributors as well as a commercial company, Cloudbees. Cloudbees even offers several different Jenkins training programs and product add-ons.
+    </p>
+</div>
+<div class="col-md-4">
+    @Html.ActionLink("Back to Home", "Index", "Home")
+</div>
+

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Challenge1DataModelStoreContainer" CdmEntityContainer="Challenge1DataEntities">
+    <EntitySetMapping Name="C__RefactorLog">
+      <EntityTypeMapping TypeName="Challenge1DataModel.C__RefactorLog">
+        <MappingFragment StoreEntitySet="__RefactorLog">
+          <ScalarProperty Name="OperationKey" ColumnName="OperationKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Modules">
+      <EntityTypeMapping TypeName="Challenge1DataModel.Module">
+        <MappingFragment StoreEntitySet="Module">
+          <ScalarProperty Name="MACAddress" ColumnName="MACAddress" />
+          <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="Challenge1DataModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
